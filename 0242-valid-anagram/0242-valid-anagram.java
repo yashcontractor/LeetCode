@@ -1,14 +1,12 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-        char[] sArr = s.toCharArray();
-        char[] tArr = t.toCharArray();
+        char[] sChars = s.toCharArray();
+        char[] tChars = t.toCharArray();
 
-        //sorts in alphabetical order
-        Arrays.sort(sArr);
-        Arrays.sort(tArr);
+        Arrays.sort(sChars);
+        Arrays.sort(tChars);
 
+        return Arrays.equals(sChars, tChars);
 
-        //now if both arrays contain equal number of letters and the same letters, it will return true.
-        return Arrays.equals(sArr, tArr);
     }
 }
